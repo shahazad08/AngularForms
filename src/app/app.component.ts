@@ -8,7 +8,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent {
 
- 
+  get userName() {
+    return this.registrationForm.controls.userName
+  }
   constructor(private fb:FormBuilder) {}
 
   registrationForm=this.fb.group({
